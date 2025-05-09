@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Press Freedom Distortion</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="blotter.min.js"></script>
+  <script src="channelSplitMaterial.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.6/underscore-min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/bradley/Blotter/build/blotter.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/bradley/Blotter/build/materials/channelSplitMaterial.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.31/bundled/lenis.min.js"></script>
+  <link rel="preload" href="NuancesNormal-Medium.woff" as="font" type="font/woff" crossorigin="anonymous">
+
+</head>
+
+<body class="theme-dark">
+  <div class="layout">
+    <!-- Left Side: Output -->
+    <main class="canvas">
+      <a href="test.html" class="news-button" aria-label="Go to News Page">News</a>
+      <div class="blotter-output-container"></div>
+    </main>
+
+    <!-- Right Side: Control Panel -->
+    <aside class="control-panel">
+      <h2>Press Freedom Typesetter</h2>
+      <p>Type your text below, select a country, 
+        then click "Visualize" to see the distortion 
+        based on press freedom scores sourced 
+        from <a href="https://rsf.org/en/index" target="_blank" rel="noopener noreferrer" class="rsf-link">Reporters Without Borders (RSF)</a>.</p>
+
+      <label for="textInput">Your Text</label>
+      <textarea class="text-input" rows="4">National Anthem</textarea>
+
+      <label for="countrySelect">Country</label>
+      <div class="select-wrapper">
+        <select class="country-select"></select>
+      </div>
+
+      <label for="fontSlider">Font Size</label>
+      <input class="font-slider" type="range" min="0.4" max="1.8" step="0.0000001" value="1" />
+
+      <div class="control-buttons">
+        <button class="circle-btn theme-toggle-btn theme-dark" aria-label="Toggle Theme"></button>
+        <button class="circle-btn uppercase-toggle-btn" aria-label="Toggle Uppercase">AA</button>
+      </div>
+
+
+
+      <button class="visualize-btn">Visualize</button>
+      <button class="reset-btn">Reset</button>
+      <button class="panel-toggle" aria-label="Toggle Control Panel">Close →</button>
+    </aside>
+    <button class="panel-return hidden" aria-label="Show Control Panel">←</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
